@@ -1,0 +1,125 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="shapePrinters.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="card" id="boxPrinter">
+        <h2>Box Printer</h2>
+        <div id="inputs">
+          <label>Width</label>
+          <input type="number" id="boxWidth" />
+          <label>Height</label>
+          <input type="number" id="boxHeight" />
+          <button
+            class="btn btn-info"
+            onclick="boxPrinter(boxWidth.value, boxHeight.value)"
+          >
+            Print
+          </button>
+        </div>
+        <label>Output</label>
+        <textarea id="boxOutput" id="" cols="30" rows="10"></textarea>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="card" id="checkeredPrinter">
+        <h2>Checkered Printer</h2>
+        <div id="inputs">
+          <label>Width</label>
+          <input type="number" id="checkWidth" />
+          <label>Height</label>
+          <input type="number" id="checkHeight" />
+          <button
+            class="btn btn-info"
+            onclick="checkeredPrinter(checkWidth.value, checkHeight.value)"
+          >
+            Print
+          </button>
+        </div>
+        <label>Output</label>
+        <textarea id="checkeredOutput" id="" cols="30" rows="10"></textarea>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="card" id="crossPrinter">
+        <h2>Cross Printer</h2>
+        <div id="inputs">
+          <label>Height</label>
+          <input type="number" id="crossHeight" />
+          <button
+            class="btn btn-info"
+            onclick="crossPrinter(crossHeight.value)"
+          >
+            Print
+          </button>
+        </div>
+        <label>Output</label>
+        <textarea id="crossOutput" id="" cols="30" rows="10"></textarea>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="card" id="lowTrianglePrinter">
+        <h2>Low Triangle Printer</h2>
+        <div id="inputs">
+          <label>Height</label>
+          <input type="number" id="lowTriangleHeight" />
+          <button
+            class="btn btn-info"
+            onclick="lowTrianglePrinter(lowTriangleHeight.value)"
+          >
+            Print
+          </button>
+        </div>
+        <label>Output</label>
+        <textarea id="lowTriangleOutput" id="" cols="30" rows="10"></textarea>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="card" id="highTrianglePrinter">
+        <h2>high Triangle Printer</h2>
+        <div id="inputs">
+          <label>Height</label>
+          <input type="number" id="highTriangleHeight" />
+          <button
+            class="btn btn-info"
+            onclick="highTrianglePrinter(highTriangleHeight.value)"
+          >
+            Print
+          </button>
+        </div>
+        <label>Output</label>
+        <textarea id="highTriangleOutput" id="" cols="30" rows="10"></textarea>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="card" id="trapezoidPrinter">
+        <h2>Trapezoid Printer</h2>
+        <div id="inputs">
+          <label>Width</label>
+          <input type="number" id="trapezoidWidth" />
+          <label>Height</label>
+          <input type="number" id="trapezoidHeight" />
+          <button
+            class="btn btn-info"
+            onclick="trapezoidPrinter(trapezoidWidth.value, trapezoidHeight.value)"
+          >
+            Print
+          </button>
+        </div>
+        <label>Output</label>
+        <textarea id="trapezoidOutput" id="" cols="30" rows="10"></textarea>
+      </div>
+    </div>
+  </body>
+</html>
