@@ -1,69 +1,36 @@
 console.log("this is working");
 
 boxPrinter = function (width, height) {
-  rowValue = "";
   finalOutput = "";
-  for (i = 0; i < width; i++) {
-    rowValue = rowValue + "*";
+
+  for (i = 0; i < height; i++) {
+    for (j = 0; j < width; j++) {
+      finalOutput += "*";
+    }
+    finalOutput += "\n";
   }
-  for (j = 0; j < height; j++) {
-    finalOutput = finalOutput + rowValue + "\n";
-  }
-  console.log(finalOutput);
   document.getElementById("boxOutput").value = finalOutput;
-  return true;
 };
 checkeredPrinter = function (width, height) {
-  finalOutput = "";
-  fullRow = "";
-  smallRow = "";
-  var width = width;
-
-  if (width % 2 == 1) {
-    for (i = 0; i < width; i++) {
+  var finalOutput = "";
+  for (i = 0; i < height; i++) {
+    var newLine = "";
+    for (j = 0; j < width; j++) {
       if (i % 2 == 0) {
-        fullRow = fullRow + "*";
+        if (j % 2 == 0) {
+          newLine += "*";
+        } else {
+          newLine += " ";
+        }
       } else {
-        fullRow = fullRow + " ";
+        if (j % 2 == 0) {
+          newLine += " ";
+        } else {
+          newLine += "*";
+        }
       }
     }
-    for (j = 0; j < width - 1; j++) {
-      if (j % 2 == 0) {
-        smallRow = smallRow + "*";
-      } else {
-        smallRow = smallRow + " ";
-      }
-    }
-    for (k = 0; k < height; k++) {
-      if (k % 2 == 0) {
-        finalOutput = finalOutput + fullRow + "\n";
-      } else {
-        finalOutput = finalOutput + " " + smallRow + "\n";
-      }
-    }
-  } else {
-    width = width - 1;
-    for (i = 0; i < width; i++) {
-      if (i % 2 == 0) {
-        fullRow = fullRow + "*";
-      } else {
-        fullRow = fullRow + " ";
-      }
-    }
-    for (j = 0; j < width - 1; j++) {
-      if (j % 2 == 0) {
-        smallRow = smallRow + "*";
-      } else {
-        smallRow = smallRow + " ";
-      }
-    }
-    for (k = 0; k < height; k++) {
-      if (k % 2 == 0) {
-        finalOutput = finalOutput + fullRow + "\n";
-      } else {
-        finalOutput = finalOutput + " " + smallRow + "\n";
-      }
-    }
+    finalOutput += newLine + "\n";
   }
   document.getElementById("checkeredOutput").value = finalOutput;
 };
@@ -142,16 +109,15 @@ trapezoidPrinter = function (width, height) {
   w = width;
   spacing = 0;
 
-  for(i=0; i<height; i++){
-      if(w<0){
-          finalOutput = "Impossible Shape!";
-      }else{
-        newRow = space.repeat(spacing) + characterValue.repeat(w) + "\n";
-        finalOutput = finalOutput + newRow;
-        spacing ++;
-        w = w-2;
-      }
+  for (i = 0; i < height; i++) {
+    if (w < 0) {
+      finalOutput = "Impossible Shape!";
+    } else {
+      newRow = space.repeat(spacing) + characterValue.repeat(w) + "\n";
+      finalOutput = finalOutput + newRow;
+      spacing++;
+      w = w - 2;
+    }
   }
   document.getElementById("trapezoidOutput").value = finalOutput;
-
 };
