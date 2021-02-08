@@ -148,7 +148,7 @@ trapezoidPrinter = function (width, height) {
       }else{
         newRow = space.repeat(spacing) + characterValue.repeat(w) + "\n";
         finalOutput = finalOutput + newRow;
-        spacing +=2;
+        spacing ++;
         w = w-2;
       }
   }
